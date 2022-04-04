@@ -1,0 +1,24 @@
+
+  <div class="container pt-4 pl-4 pr-4" [formGroup]="form">
+    <div class="col-12 row">
+      <mat-form-field appearance="outline" class="col-8">
+        <mat-label>User</mat-label>
+        <input matInput formControlName="emailAddress" required placeholder="Please enter new user's email address">
+        <mat-error *ngIf="form.controls.emailAddress.hasError('required')">Required field</mat-error>
+        <mat-error *ngIf="form.controls.emailAddress.hasError('email')">Invalid email address</mat-error>
+      </mat-form-field>
+      <div class="col-2" *ngIf="!saving">
+        <button class="personal-btn btn-success " mat-raised-button (click)="save()"  [disabled]="form.invalid" >ADD </button>
+      </div>
+      <div class="spinner" *ngIf="saving">
+        <button class="personal-btn btn-success  " mat-raised-button  >
+          <div class="mt-16 row " style="align-items: center">
+            <mat-spinner diameter="20" color="primary" ></mat-spinner>
+            <span class="col-4">
+          SAVING...
+        </span>
+          </div>
+        </button>
+      </div>
+    </div>
+</div>

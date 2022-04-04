@@ -1,0 +1,13 @@
+<div class="" *ngIf="user">
+  <div class="centered row">
+   <div class="col-6">
+     <mat-icon style="color: red">close</mat-icon>
+     <span>
+      {{user.emailAddress ? user.emailAddress : ''}}
+    </span>
+   </div>
+    <div class="col-6">
+      <app-user-role-select [roles]="roles" [userRole]="user.userRole? user.userRole.id : null" (roleChanged)="changeRoleToUser($event)" class="col-12"></app-user-role-select>
+    </div>
+  </div>
+</div>

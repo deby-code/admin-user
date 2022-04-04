@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1234,
+      "emailAddress": "deborah@gmail.com ",
+      "userRole": {
+        "id": 2,
+        "name": "Account Status",
+        "summary": "Access to all Information. Cannot manage users"
+      }
+    },
+    {
+      "id": 2356,
+      "emailAddress": "deborah@gmail.com ",
+      "userRole": {
+        "id": 1,
+        "name": "Administrator",
+        "summary": "Access to All Information. Can also add/delete users"
+      }
+    },
+    {
+      "id": 3456,
+      "emailAddress": "deborah@gmail.com ",
+      "userRole": {
+        "id": 3,
+        "name": "Not pricing"
+      }
+    },
+    {
+      "id": 4567,
+      "emailAddress": "deborah@gmail.com ",
+      "userRole": {
+        "id": 3,
+        "name": "Pricing",
+        "summary": "Access to MOST information. Cannot access credit status or payments"
+      }
+    }
+  ],
+  "user-roles": [
+    {
+      "id": 1,
+      "name": "Administrator",
+      "summary": "Access to All Information. Can also add/delete users"
+    },
+    {
+      "id": 2,
+      "name": "Account Status",
+      "summary": "Access to all Information. Cannot manage users"
+    },
+    {
+      "id": 3,
+      "name": "Pricing",
+      "summary": "Access to MOST information. Cannot access credit status or payments"
+    },
+    {
+      "id": 4,
+      "name": "Not pricing",
+      "summary": "Access to only quantities without pricing information"
+    }
+  ]
+}

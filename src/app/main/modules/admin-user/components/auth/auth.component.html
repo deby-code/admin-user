@@ -1,0 +1,24 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first mt-4">
+      <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-sample-png-5.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="form">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" formControlName="username">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" #pass>
+      <button mat-raised-button color="primary" class="fadeIn fourth m-3" value="Log In" (click)="logUser()" [disabled]="form.invalid">Log in</button>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
