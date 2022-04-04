@@ -34,6 +34,15 @@
         "name": "Pricing",
         "summary": "Access to MOST information. Cannot access credit status or payments"
       }
+    },
+    {
+      "id": 4568,
+      "emailAddress": "asd@asd",
+      "userRole": {
+        "id": 1,
+        "name": "Administrator",
+        "summary": "Access to All Information. Can also add/delete users"
+      }
     }
   ],
   "user-roles": [
