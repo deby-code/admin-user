@@ -19,8 +19,8 @@ export class AdminUserService {
     return this.http.get(this.apiRoles);
   }
 
-  getUser(id: string): Observable<any> {
-    return this.http.get(`${this.apiUsers}/${id}`);
+  deleteUser(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUsers}/${id}`);
   }
 
   edit(id: string, item: any): Observable<any> {

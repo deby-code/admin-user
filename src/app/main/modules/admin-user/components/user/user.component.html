@@ -1,13 +1,18 @@
 <div class="" *ngIf="user">
   <div class="centered row">
-   <div class="col-6">
-     <mat-icon style="color: red">close</mat-icon>
-     <span>
+   <div class="col-6 " >
+     <button mat-icon-button (click)="delete(user.id)" matTooltip="Delete user">
+       <mat-icon style="color: red">close</mat-icon>
+     </button>
+     <span (click)="goEditUser(user)" class="pointer">
       {{user.emailAddress ? user.emailAddress : ''}}
     </span>
    </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="!saving">
       <app-user-role-select [roles]="roles" [userRole]="user.userRole? user.userRole.id : null" (roleChanged)="changeRoleToUser($event)" class="col-12"></app-user-role-select>
+    </div>
+    <div class="col-5" *ngIf="saving">
+      <app-action-spinner></app-action-spinner>
     </div>
   </div>
 </div>

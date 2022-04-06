@@ -8,17 +8,13 @@
         <mat-error *ngIf="form.controls.emailAddress.hasError('email')">Invalid email address</mat-error>
       </mat-form-field>
       <div class="col-2" *ngIf="!saving">
-        <button class="personal-btn btn-success " mat-raised-button (click)="save()"  [disabled]="form.invalid" >ADD </button>
+        <button class="personal-btn btn-success " mat-raised-button (click)="save()"  [disabled]="form.invalid" >{{userId? 'SAVE': 'ADD'}} </button>
       </div>
       <div class="spinner" *ngIf="saving">
-        <button class="personal-btn btn-success  " mat-raised-button  >
-          <div class="mt-16 row " style="align-items: center">
-            <mat-spinner diameter="20" color="primary" ></mat-spinner>
-            <span class="col-4">
-          SAVING...
-        </span>
-          </div>
+        <button class="personal-btn " mat-raised-button >
+          <app-action-spinner [color]="'primary'" [phrase]="'SAVING'"></app-action-spinner>
         </button>
       </div>
     </div>
 </div>
+<!--{{user.id}}-->

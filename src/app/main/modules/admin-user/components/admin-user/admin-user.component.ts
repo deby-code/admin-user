@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 export class AdminUserComponent implements OnInit {
   roles: Observable<any>;
   users: Observable<any>;
+  user: any;
 
   constructor(private adminUserService: AdminUserService) {
   }
@@ -27,5 +28,8 @@ export class AdminUserComponent implements OnInit {
 
   loadUsers(): void {
     this.users = this.adminUserService.getUsers();
+  }
+  getUserToEdit(event): void {
+    this.user = event;
   }
 }

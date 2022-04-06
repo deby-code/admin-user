@@ -1,20 +1,20 @@
 <app-tool-bar></app-tool-bar>
 
 <div class="">
-  <div class="container form-control mt-5">
+  <div class="container form-control mt-5 my-container">
     <div class="row col-12">
-      <div class="p-4 bg-success text-white bg-gradient col-4" style="background: gray">
+      <div class="p-4 bg-success text-white bg-gradient col-4 green-content">
         <h2 class="text-center mb-4">Users Roles</h2>
         <div *ngFor="let role of roles" class="mb-4 col-8">
           <app-role [role]="role"></app-role>
         </div>
       </div>
       <div class="col-8">
-        <app-admin-user-edit (saveAction)="loadUsers()"></app-admin-user-edit>
+        <app-admin-user-edit (saveAction)="loadUsers()" [user]="user"></app-admin-user-edit>
         <mat-divider class="mb-4 m-lg-4"></mat-divider>
         <div class="users-container ">
           <div *ngFor="let user of users | async" class="mb-2 col-12">
-            <app-user [user]="user" [roles]="roles"></app-user>
+            <app-user [user]="user" [roles]="roles" (deleted)="loadUsers()" (edit)="getUserToEdit($event)"></app-user>
           </div>
         </div>
         <mat-divider class="mb-4 m-lg-4"></mat-divider>

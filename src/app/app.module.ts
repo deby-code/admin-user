@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {FormBuilder} from '@angular/forms';
 import {AdminUserModule} from './main/modules/admin-user/admin-user.module';
+import {NotificationService} from './main/modules/admin-user/services/notification.service';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -17,9 +19,10 @@ import {AdminUserModule} from './main/modules/admin-user/admin-user.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
-  providers: [FormBuilder],
+  providers: [FormBuilder, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

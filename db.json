@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "id": 1234,
-      "emailAddress": "deborah@gmail.com ",
+      "id": 1,
+      "emailAddress": "hhhhh@rf888800oooo",
       "userRole": {
         "id": 2,
         "name": "Account Status",
@@ -10,34 +10,8 @@
       }
     },
     {
-      "id": 2356,
-      "emailAddress": "deborah@gmail.com ",
-      "userRole": {
-        "id": 1,
-        "name": "Administrator",
-        "summary": "Access to All Information. Can also add/delete users"
-      }
-    },
-    {
-      "id": 3456,
-      "emailAddress": "deborah@gmail.com ",
-      "userRole": {
-        "id": 3,
-        "name": "Not pricing"
-      }
-    },
-    {
-      "id": 4567,
-      "emailAddress": "deborah@gmail.com ",
-      "userRole": {
-        "id": 3,
-        "name": "Pricing",
-        "summary": "Access to MOST information. Cannot access credit status or payments"
-      }
-    },
-    {
-      "id": 4568,
-      "emailAddress": "asd@asd",
+      "id": 2,
+      "emailAddress": "asd@ddd",
       "userRole": {
         "id": 1,
         "name": "Administrator",

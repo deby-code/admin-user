@@ -1,0 +1,30 @@
+.dialog-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dialog-options{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.content{
+  width: 100%;
+::ng-deep .mat-form-field {
+    width: 100%;
+  }
+  ::ng-deep  .personal-btn {
+    margin-left: unset;
+    min-width: 90px;
+  }
+  ::ng-deep .col-12{
+    display: flex;
+    justify-content: center;
+  }
+  ::ng-deep  .col-2 {
+
+    padding: unset;
+  }
+}

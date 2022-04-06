@@ -1,10 +1,11 @@
-<div class="">
+<div class="row">
   <mat-form-field appearance="outline" class="col-7">
     <mat-label>Select an option</mat-label>
     <mat-select disableRipple [value]="userRole">
       <mat-option *ngFor="let role of roles" [value]="role.id" (click)="changeRoleToUser(role)">{{role.name}}</mat-option>
     </mat-select>
   </mat-form-field>
+
 </div>
 
 

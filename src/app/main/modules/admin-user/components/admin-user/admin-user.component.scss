@@ -3,6 +3,7 @@
 }
 .users-container{
   max-height: 300px;
+  min-height: 300px;
   overflow: auto;
   padding-left: 32px;
   padding-right: 32px;
@@ -11,4 +12,13 @@
 .options button{
   padding: 11px;
 
+}
+.my-container{
+  padding: unset;
+}
+.green-content {
+  background: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }

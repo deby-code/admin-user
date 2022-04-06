@@ -1,0 +1,14 @@
+<div class="dialog-container">
+  <div class="dialog-options">
+    <h4>Editar usuario</h4>
+    <button mat-icon-button (click)="onNoClick(false)">
+      <mat-icon>close</mat-icon>
+    </button>
+
+  </div>
+  <div  class="content">
+    <app-admin-user-edit  [user]="data.user" (saveAction)="onNoClick(true)"></app-admin-user-edit>
+
+  </div>
+</div>
+

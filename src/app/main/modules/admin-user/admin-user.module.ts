@@ -9,7 +9,7 @@ import {
   MatInputModule,
   MatMenuModule,
   MatSelectModule,
-  MatSliderModule
+  MatSliderModule, MatSnackBarModule
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AdminUserComponent} from './components/admin-user/admin-user.component';
@@ -21,10 +21,15 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { AuthComponent } from './components/auth/auth.component';
 import {AuthService} from './services/auth.service';
 import {MatProgressSpinnerModule} from '@angular/material';
+import { ActionSpinnerComponent } from './components/action-spinner/action-spinner.component';
+import { EditUserDialogComponent } from './components/edit-user-dialog/edit-user-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
     declarations: [AdminUserComponent, AdminUserEditComponent,
-      RoleComponent, UserComponent, UserRoleSelectComponent, ToolBarComponent, AuthComponent],
+      RoleComponent, UserComponent, UserRoleSelectComponent,
+      ToolBarComponent, AuthComponent, ActionSpinnerComponent, EditUserDialogComponent],
   exports: [
     ToolBarComponent
   ],
@@ -41,8 +46,12 @@ import {MatProgressSpinnerModule} from '@angular/material';
     MatDividerModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatTooltipModule
   ],
-  providers: [AuthService]
+  providers: [AuthService],
+  entryComponents: [EditUserDialogComponent]
 })
 export class AdminUserModule {
     constructor() {
