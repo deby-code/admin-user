@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "emailAddress": "hhhhh@rf888800oooo",
+      "emailAddress": "deborah@gmail.com",
       "userRole": {
         "id": 2,
         "name": "Account Status",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "emailAddress": "asd@ddd",
+      "emailAddress": "mary@gmail.com",
       "userRole": {
         "id": 1,
         "name": "Administrator",
@@ -20,11 +20,16 @@
     },
     {
       "id": 3,
-      "emailAddress": "hh@ee"
+      "emailAddress": "admin@gmail.com",
+      "userRole": {
+        "id": 1,
+        "name": "Administrator",
+        "summary": "Access to All Information. Can also add/delete users"
+      }
     },
     {
       "id": 4,
-      "emailAddress": "hh@44.com"
+      "emailAddress": "jessica@gmail.com"
     }
   ],
   "user-roles": [
