@@ -13,7 +13,7 @@
         <app-admin-user-edit (saveAction)="loadUsers()" [user]="user"></app-admin-user-edit>
         <mat-divider class="mb-4 m-lg-4"></mat-divider>
         <div class="users-container ">
-          <div *ngFor="let user of users | async" class="mb-2 col-12">
+          <div *ngFor="let user of users" class="mb-2 col-12">
             <app-user [user]="user" [roles]="roles" (deleted)="loadUsers()" (edit)="getUserToEdit($event)"></app-user>
           </div>
         </div>

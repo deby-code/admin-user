@@ -9,7 +9,7 @@
     </div>
     <div class="collapse navbar-collapse col-2" id="navbarSupportedContent1">
       <form class="d-flex col-6 ">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search user" aria-label="Search" [formControl]="searchFormControl">
       </form>
     </div>
     <div class="col-4 centered" *ngIf="user">
@@ -31,10 +31,8 @@
           <span>Logout</span>
         </button>
       </mat-menu>
-
     </div>
     <div class="col-1 centered" *ngIf="!user">
-
       <button mat-raised-button routerLink="/admin-user/auth">
         <span>Login</span>
       </button>

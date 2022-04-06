@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
+import {FormControl} from "@angular/forms";
+import {AdminUserService} from "../../services/admin-user.service";
 
 @Component({
   selector: 'app-tool-bar',
@@ -8,11 +10,15 @@ import {AuthService} from '../../services/auth.service';
 })
 export class ToolBarComponent implements OnInit {
   user: any;
-
-  constructor(private authService: AuthService) {
+  searchFormControl = new FormControl('');
+  constructor(private authService: AuthService, private adminUserService: AdminUserService) {
   }
 
   ngOnInit() {
+    this.searchFormControl.valueChanges.subscribe(value => {
+      this.adminUserService.searchCriteria.next(value);
+      }
+    );
     this.authService.loggedUser.subscribe(user => {
       this.user = user;
     });

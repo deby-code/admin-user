@@ -9,8 +9,10 @@ import {Observable} from 'rxjs';
 })
 export class AdminUserComponent implements OnInit {
   roles: Observable<any>;
-  users: Observable<any>;
+  users: any;
+  filteredUser: any;
   user: any;
+  searchCriteria: string = '';
 
   constructor(private adminUserService: AdminUserService) {
   }
@@ -18,6 +20,13 @@ export class AdminUserComponent implements OnInit {
   ngOnInit() {
     this.loadRoles();
     this.loadUsers();
+    this.adminUserService.searchCriteria.subscribe(value => {
+      this.searchCriteria = value;
+      console.log(value);
+      if (this.filteredUser) {
+       this.users = this.filteredUser.filter(state => state.emailAddress.toLowerCase().indexOf(this.searchCriteria) >= 0);
+      }
+    });
   }
 
   loadRoles(): void {
@@ -27,8 +36,12 @@ export class AdminUserComponent implements OnInit {
   }
 
   loadUsers(): void {
-    this.users = this.adminUserService.getUsers();
+    this.adminUserService.getUsers().subscribe(response => {
+      this.filteredUser = response;
+      this.users = response;
+    });
   }
+
   getUserToEdit(event): void {
     this.user = event;
   }

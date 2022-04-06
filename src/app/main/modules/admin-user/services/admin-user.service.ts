@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
 export class AdminUserService {
   apiUsers = 'http://localhost:3000/users';
   apiRoles = 'http://localhost:3000/user-roles';
+  public searchCriteria: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(private http: HttpClient) {
   }
